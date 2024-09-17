@@ -1,5 +1,5 @@
 import { web } from "@pulumi/azure-native";
-import { containerIp } from "./container-instance";
+// import { containerIp } from "./container-instance";
 
 const resourceGroupName = "NZ-SYD-LHS-SANDBOX-ARG-HAN";
 
@@ -44,16 +44,20 @@ const restAPI = new web.WebApp(
 
       httpLoggingEnabled: true,
       logsDirectorySizeLimit: 35,
-      appSettings: [
-        {
-          name: "AV_HOST",
-          value: containerIp,
-        },
-        {
-          name: "AV_PORT",
-          value: "3310",
-        },
-      ],
+
+      // add the container instance config later to trigger the error
+      // this does not throw error if both resource gets create for the first time.
+
+      //   appSettings: [
+      //     {
+      //       name: "AV_HOST",
+      //       value: containerIp,
+      //     },
+      //     {
+      //       name: "AV_PORT",
+      //       value: "3310",
+      //     },
+      //   ],
     },
   },
   {
