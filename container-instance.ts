@@ -1,6 +1,8 @@
 import { containerinstance } from "@pulumi/azure-native";
 import { resourceGroupName } from "./env";
 
+export const containerInstanceName = `test-container-group`;
+
 export const containerGroup = new containerinstance.ContainerGroup(
   containerInstanceName,
   {
