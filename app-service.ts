@@ -1,7 +1,6 @@
 import { web } from "@pulumi/azure-native";
+import { resourceGroupName } from "./env";
 // import { containerIp } from "./container-instance";
-
-const resourceGroupName = "NZ-SYD-LHS-SANDBOX-ARG-HAN";
 
 export const appServicePlan = new web.AppServicePlan(
   `test-asp-sbx`,
