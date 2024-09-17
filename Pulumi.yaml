@@ -1,0 +1,10 @@
+name: pulumi-ignore-error
+runtime:
+  name: nodejs
+  options:
+    packagemanager: yarn
+description: A minimal Azure Native TypeScript Pulumi program
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-typescript
